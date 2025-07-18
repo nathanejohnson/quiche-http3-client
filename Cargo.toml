@@ -1,0 +1,15 @@
+[package]
+name = "http3-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quiche = "0.24.4"
+mio = { version = "1.0", features = ["net", "os-poll"] }
+url = "1"
+log = "0.4"
+ring = "0.17"
+env_logger = "0.11.8"
+
+[profile.release]
+panic = "abort"
